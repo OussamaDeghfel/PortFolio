@@ -1,5 +1,7 @@
 import React from "react";
 import ComingSoon from "../assets/projects/ComingSoon.jpg";
+import FooDy from "../assets/projects/FooDy.png";
+import MovieSite from "../assets/projects/MovieSite.jpg";
 
 const Projects = () => {
   return (
@@ -19,21 +21,33 @@ const Projects = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Grid Item */}
           <div
-            style={{ backgroundImage: `url(${ComingSoon})` }}
+            style={{
+              backgroundImage: `url(${FooDy})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+            }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
           >
             {/* Hover Effect */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider ">
-                Project 01
+                Food Deliver
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a
+                  href="https://food-deliver-seven.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="text-center rounded-lg px-6 py-3 m-5 bg-white text-gray-700 font-bold text-lg hover:scale-105">
                     Demo
                   </button>
                 </a>
-                <a href="/">
+                <a
+                  href="https://github.com/OussamaDeghfel/Food_Deliver.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="text-center rounded-lg px-6 py-3 m-5 bg-white text-gray-700 font-bold text-lg hover:scale-105">
                     Code
                   </button>
@@ -42,21 +56,33 @@ const Projects = () => {
             </div>
           </div>
           <div
-            style={{ backgroundImage: `url(${ComingSoon})` }}
+            style={{
+              backgroundImage: `url(${MovieSite})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+            }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
           >
             {/* Hover Effect */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
-                Project 02
+                Netflix MovieSite
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a
+                  href="https://movie-site-omega.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="text-center rounded-lg px-6 py-3 m-5 bg-white text-gray-700 font-bold text-lg hover:scale-105">
                     Demo
                   </button>
                 </a>
-                <a href="/">
+                <a
+                  href="https://github.com/OussamaDeghfel/Movie_Site.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="text-center rounded-lg px-6 py-3 m-5 bg-white text-gray-700 font-bold text-lg hover:scale-105">
                     Code
                   </button>
