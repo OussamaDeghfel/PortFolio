@@ -143,7 +143,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-[#333333]">
             <a
               className="flex justify-between items-center w-full font-bold text-gray-300"
-              href=""
+              href="https://github.com/OussamaDeghfel"
               target="_blank"
               rel="noopener noreferrer"
             >
