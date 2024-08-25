@@ -1,5 +1,7 @@
 import React from 'react'
 import comingSoon from "../assets/projects/ComingSoon.jpg"
+import foody from '../assets/projects/FooDy.png'
+import movie from '../assets/projects/MovieSite.jpg'
 
 const ProjectEdit = () => {
   return (
@@ -9,10 +11,10 @@ const ProjectEdit = () => {
         <p className='py-4'>These are the projects I have built using the skills outlined above</p>
         <div className='grid grid-cols-3 w-full gap-10'>
             <div className='flex'>
-                <img src={comingSoon} alt="comming soon project" className='rounded-md h-56 w-72' />
+                <img src={foody} alt="comming soon project" className='rounded-md h-56 w-72' />
             </div>
             <div className='flex'>
-                <img src={comingSoon} alt="comming soon project" className='rounded-md h-56 w-72' />
+                <img src={movie} alt="comming soon project" className='rounded-md h-56 w-72' />
             </div>
             <div className='flex'>
                 <img src={comingSoon} alt="comming soon project" className='rounded-md h-56 w-72'/>
