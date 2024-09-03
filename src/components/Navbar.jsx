@@ -162,7 +162,6 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full font-bold text-gray-300"
               href="./assets/DOCV.pdf"
-              download="DOCV.pdf"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
