@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import ProjectEdit from "./components/projectEdit";
 // import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import AllSkills from "./components/Skills/AllSkills";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Skills />
+      <AllSkills />
       {/* <Projects /> */}
       <ProjectEdit />
       <Contact />
