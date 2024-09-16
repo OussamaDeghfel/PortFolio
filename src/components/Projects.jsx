@@ -58,10 +58,10 @@ const Projects = () => {
           <div
             style={{
               backgroundImage: `url(${MovieSite})`,
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div border-2 border-red-600"
           >
             {/* Hover Effect */}
             <div className="opacity-0 group-hover:opacity-100">

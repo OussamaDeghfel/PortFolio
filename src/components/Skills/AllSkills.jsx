@@ -1,14 +1,14 @@
 import React from "react";
-import HTML from "../../assets/html.png";
-import CSS from "../../assets/css.png";
-import Tailwind from "../../assets/tailwind.png";
-import Javascript from "../../assets/javascript.png";
-import Typescript from "../../assets/typescript.svg";
-import ReactImg from "../../assets/react.png";
-import Github from "../../assets/github.png";
-import Git from "../../assets/Git-Icon.svg";
-import Ps from "../../assets/PS.png";
-import Redux from "../../assets/redux.svg"
+import HTML from "../../assets/skillsIcon/html.png";
+import CSS from "../../assets/skillsIcon/css.png";
+import Tailwind from "../../assets/skillsIcon/tailwind.png";
+import Javascript from "../../assets/skillsIcon/javascript.png";
+import Typescript from "../../assets/skillsIcon/typescript.svg";
+import ReactImg from "../../assets/skillsIcon/react.png";
+import Github from "../../assets/skillsIcon/github.png";
+import Git from "../../assets/skillsIcon/Git-Icon.svg";
+import Ps from "../../assets/skillsIcon/PS.png";
+import Redux from "../../assets/skillsIcon/redux.svg"
 
 import Skill from "./skill";
 
