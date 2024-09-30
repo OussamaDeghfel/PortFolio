@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
 import ComingSoon from "../../assets/projects/ComingSoon.jpg";
 import MovieSite from "../../assets/projects/MovieSite.jpg";
@@ -8,18 +8,53 @@ import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
 
 const MyProjects = () => {
   const [counter, setCounter] = useState(0);
-  const [projectShow, setProjectShow] = useState("");
+  const [disabledButton, setDisabledButton] = useState(false);
+  
+//   const images = [MovieSite, JobFinder, FooDy, IPAddressTracker, ComingSoon];
 
-
-  const images = [MovieSite, JobFinder, FooDy, IPAddressTracker, ComingSoon];
+const projects = [
+    {
+      id: 1,
+      title: "Site For MovieWatch",
+      image: {MovieSite},
+    },
+    {
+      id: 2,
+      title: "Find Job",
+      image: {JobFinder},
+    },
+    {
+      id: 3,
+      title: "Food Restaurant",
+      image: {FooDy},
+    },
+    {
+      id: 4,
+      title: "Tracking IP Address ",
+      image: {IPAddressTracker},
+    },
+    {
+      id: 5,
+      title: "ComingSoon  ",
+      image: {ComingSoon},
+    },
+    // Add more projects as needed
+  ];
+  const [projectShow, setProjectShow] = useState(images[0]);
 
   useMemo(() => {
-    setProjectShow(images[counter]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    if ((counter < 0) || (counter > images.length)) {
+      setDisabledButton(true);
+    } else if ((counter > 0) || (counter < images.length)) {
+      setDisabledButton(false);
+      setProjectShow(images[counter]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
 
-  console.log("Counter",counter)
-  console.log("projectShow",projectShow)
+  console.log("Counter", counter);
+  console.log("projectShow", projectShow);
+  console.log("disbaledButton", disabledButton);
 
   return (
     <div
@@ -34,11 +69,20 @@ const MyProjects = () => {
           These are the projects I have built using the skills outlined above
         </p>
         <div className="w-full h-full flex p-8 px-20 justify-between items-center">
-          <BiArrowFromRight
-            size={40}
-            onClick={() => setCounter(counter - 1)}
-            className="cursor-pointer hover:rounded-full hover:border-2 hover:border-white duration-50 hover:shadow-sm hover:shadow-blue-300"
-          />
+          {disabledButton ? (
+            <BiArrowFromRight
+              size={40}
+              onClick={() => setCounter(counter - 1)}
+              className="cursor-pointer hover:rounded-full hover:border-2 hover:border-white duration-50 hover:shadow-sm hover:shadow-blue-300"
+            />
+          ) : (
+            <BiArrowFromRight
+              size={40}
+              color="gray"
+              className="cursor-not-allowed hover:rounded-full hover:border-2 hover:border-gray-400 duration-50 hover:shadow-sm hover:shadow-blue-300"
+            />
+          )}
+
           <div className="flex flex-col justify-center items-center">
             <div className="h-96 w-[70vh] border border-slate-600 rounded-md shadow-md shadow-blue-300">
               <div className="flex">
@@ -61,11 +105,16 @@ const MyProjects = () => {
               </div>
             </div>
           </div>
-          <BiArrowFromLeft
+          {disabledButton ? <BiArrowFromLeft
+            size={40}
+            color="gray"
+            className="cursor-not-allowed hover:rounded-full hover:border-2 hover:border-gray-400 duration-50 hover:shadow-sm hover:shadow-blue-300"
+          /> : (<BiArrowFromLeft
             size={40}
             onClick={() => setCounter(counter + 1)}
             className="cursor-pointer hover:rounded-full hover:border-2 hover:border-white duration-50 hover:shadow-sm hover:shadow-blue-300"
-          />
+          />)}
+          
         </div>
       </div>
     </div>
