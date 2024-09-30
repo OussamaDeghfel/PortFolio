@@ -7,7 +7,7 @@ const ProjectEdit = () => {
   const images = [foody, movie, comingSoon, comingSoon, comingSoon, comingSoon];
 
   return (
-    <div className='flex pt-10 justify-around bg-[#0a192f] text-white items-center w-full h-full'>
+    <div name="projects" className='flex pt-10 justify-around bg-[#0a192f] text-white items-center w-full h-full'>
         <div className='w-[980px] '>
         <h1 className='text-4xl font-bold inline border-b-4 border-blue-300'>Projects</h1>
         <p className='py-4'>These are the projects I have built using the skills outlined above</p>
