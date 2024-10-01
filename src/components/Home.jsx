@@ -14,9 +14,10 @@ const Home = () => {
           FrontEnd Web Developer
         </h2>
         <p className="text-[#8892b0] py-4 max-w-[700px]">
-          I'm a passionate front-end developer with a knack for turning design
-          concepts into visually stunning and user-friendly websites and web
-          applications
+          As a Frontend Web Developer with a solid design background, I'm driven
+          by a passion for learning and creating. I specialize in developing
+          engaging, user-centric web experiences, always prioritizing user
+          satisfaction and bringing innovative ideas to life.
         </p>
         <div className="flex justify-center items-center">
           <button className="text-white group border-2 rounded-md hover:text-[#0a192f] hover:font-bold px-6 py-3 my-2 flex items-center hover:bg-blue-400 hover:border-blue-400">
