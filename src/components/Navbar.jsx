@@ -67,11 +67,6 @@ const Navbar = () => {
               Projects
             </Link>
           </li>
-          <li className="hover:text-blue-400 hover:font-bold">
-            <Link to="contact" smooth={true} duration={500}>
-              Contact
-            </Link>
-          </li>
         </ul>
         {/* Web Bar */}
         <div onClick={handleClick} className="md:hidden z-10">
@@ -113,16 +108,6 @@ const Navbar = () => {
               duration={500}
             >
               Projects
-            </Link>
-          </li>
-          <li className="py-6 text-4xl hover:text-[#0af192]">
-            <Link
-              onClick={handleClick}
-              to="contact"
-              smooth={true}
-              duration={500}
-            >
-              Contact
             </Link>
           </li>
         </ul>
