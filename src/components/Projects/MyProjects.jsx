@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+// import { useMemo, useState } from "react";
 // import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
 import ComingSoon from "../../assets/projects/ComingSoon.jpg";
 import MovieSite from "../../assets/projects/MovieSite.jpg";
@@ -7,54 +7,39 @@ import FooDy from "../../assets/projects/FooDy.png";
 import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
 
 const MyProjects = () => {
-//   const [counter, setCounter] = useState(0);
-//   const [disabledButton, setDisabledButton] = useState(false);
-  
-//   const images = [MovieSite, JobFinder, FooDy, IPAddressTracker, ComingSoon];
 
 const projects = [
     {
       id: 1,
       title: "Site For MovieWatch",
-      image: {MovieSite},
+      image: MovieSite,
     },
     {
       id: 2,
       title: "Find Job",
-      image: {JobFinder},
+      image: JobFinder,
     },
     {
       id: 3,
       title: "Food Restaurant",
-      image: {FooDy},
+      image: FooDy,
     },
     {
       id: 4,
       title: "Tracking IP Address ",
-      image: {IPAddressTracker},
+      image: IPAddressTracker,
     },
     {
       id: 5,
       title: "ComingSoon",
-      image: {ComingSoon},
+      image: ComingSoon,
     },
-    // Add more projects as needed
+    {
+      id: 6,
+      title: "ComingSoon",
+      image: ComingSoon,
+    },
   ];
-//   const [projectShow, setProjectShow] = useState(projects[0]);
-
-//   useMemo(() => {
-//     if ((counter < 0) || (counter > projects.length)) {
-//       setDisabledButton(true);
-//     } else if ((counter > 0) || (counter < projects.length)) {
-//       setDisabledButton(false);
-//       setProjectShow(projects[counter]);
-//     }
-//     // eslint-disable-next-line react-hooks/exhaustive-deps
-//   }, [counter]);
-
-//   console.log("Counter", counter);
-//   console.log("projectShow", projectShow);
-//   console.log("disbaledButton", disabledButton);
 
   return (
     <div
@@ -120,7 +105,7 @@ const projects = [
         </div> */}
 
         {/* ITEMS PROJECTS SHOW  */}
-        <div className="w-full h-full flex p-8 justify-between items-center">
+        <div className="w-full h-full flex justify-between items-center">
           <div className="grid grid-cols-3 gap-8 justify-center items-center">
             {projects.map((project) => (
                 <div className="h-96 w-[50vh] border border-slate-600 rounded-md shadow-md shadow-blue-300" key={project.id}>
@@ -128,7 +113,7 @@ const projects = [
                   <img
                     src={project.image}
                     alt="comming soon project"
-                    className="rounded-md h-64 w-full"
+                    className="rounded-t-md h-64 w-full"
                   />
                 </div>
                 <div className="flex justify-between items-center p-4">
