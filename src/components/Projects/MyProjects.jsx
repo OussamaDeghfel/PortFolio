@@ -108,7 +108,7 @@ const projects = [
         <div className="w-full h-full flex justify-between items-center">
           <div className="grid grid-cols-3 gap-8 justify-center items-center">
             {projects.map((project) => (
-                <div className="h-96 w-[50vh] border border-slate-600 rounded-md shadow-md shadow-blue-300" key={project.id}>
+                <div className="h-96 w-[50vh] border border-slate-600 rounded-md shadow-sm shadow-blue-300" key={project.id}>
                 <div className="flex">
                   <img
                     src={project.image}
@@ -117,12 +117,12 @@ const projects = [
                   />
                 </div>
                 <div className="flex justify-between items-center p-4">
-                  <p> {project.title}</p>
+                  <p className="font-bold"> {project.title}</p>
                   <div className="flex flex-col space-y-2">
-                    <button className="opacity-35 bg-slate-800 border-2 border-white rounded-md px-4 py-2">
+                    <button className="opacity-35 bg-slate-800 border-2 border-gray-500 rounded-md px-4 py-2">
                       Code
                     </button>
-                    <button className="bg-slate-800 border-2 border-white rounded-md px-4 py-2">
+                    <button className="bg-slate-800 border-2 border-gray-500 rounded-md px-4 py-2">
                       Visit
                     </button>
                   </div>
