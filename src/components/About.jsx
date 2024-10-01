@@ -14,17 +14,11 @@ const About = () => {
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm:text-right text-4xl font-bold">
-            <p>Hi. I'm Oussama, Nice to meet you. Please take a look around</p>
+            <p>Hi. Nice to meet you. Please take a look around</p>
           </div>
           <div>
             <p>
-              Junior front-end web development using HTML, CSS, JavaScript,
-              React JS & Tailwind CSS As a recent graduate with a Master degree
-              in computer science earned in 2023, I am now seeking opportunities
-              to contribute my creativity and technical skills to a
-              forward-thinking and stable company. I am eager to further develop
-              and refine my skills, and I am ready to contribute my dedication
-              to a collaborative and supportive work environment.
+              Junior Front-end developer with over a year of experience building responsive, user-focused web applications. With a solid foundation from a Master’s degree in Computer Science (2023), I am skilled in creating seamless user experiences and implementing modern web development practices. I continuously stay up-to-date with industry trends and thrive in collaborative, innovative environments.
             </p>
           </div>
         </div>
