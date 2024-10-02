@@ -13,46 +13,64 @@ const projects = [
       id: 1,
       title: "Site For MovieWatch",
       image: MovieSite,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 2,
       title: "Find Job",
       image: JobFinder,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 3,
       title: "Food Restaurant",
       image: FooDy,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 4,
       title: "Tracking IP Address ",
       image: IPAddressTracker,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 5,
       title: "ComingSoon",
       image: ComingSoon,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 6,
       title: "ComingSoon",
       image: ComingSoon,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 7,
       title: "ComingSoon",
       image: ComingSoon,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 8,
       title: "ComingSoon",
       image: ComingSoon,
+      codeURL: "",
+      siteURL:""
     },
     {
       id: 9,
       title: "ComingSoon",
       image: ComingSoon,
+      codeURL: "",
+      siteURL:""
     },
   ];
 
