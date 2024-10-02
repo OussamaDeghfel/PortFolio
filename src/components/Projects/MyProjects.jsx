@@ -39,6 +39,21 @@ const projects = [
       title: "ComingSoon",
       image: ComingSoon,
     },
+    {
+      id: 7,
+      title: "ComingSoon",
+      image: ComingSoon,
+    },
+    {
+      id: 8,
+      title: "ComingSoon",
+      image: ComingSoon,
+    },
+    {
+      id: 9,
+      title: "ComingSoon",
+      image: ComingSoon,
+    },
   ];
 
   return (
@@ -108,21 +123,21 @@ const projects = [
         <div className="w-full h-full flex justify-between items-center">
           <div className="grid grid-cols-3 gap-8 justify-center items-center">
             {projects.map((project) => (
-                <div className="h-96 w-[50vh] border border-slate-600 rounded-md shadow-sm shadow-blue-300" key={project.id}>
+                <div className="h-80 w-[50vh] border border-slate-600 rounded-md shadow-sm shadow-blue-300" key={project.id}>
                 <div className="flex">
                   <img
                     src={project.image}
                     alt="comming soon project"
-                    className="rounded-t-md h-64 w-full"
+                    className="rounded-t-md h-48 w-full"
                   />
                 </div>
                 <div className="flex justify-between items-center p-4">
-                  <p className="font-bold"> {project.title}</p>
-                  <div className="flex flex-col space-y-2">
-                    <button className="opacity-35 bg-slate-800 border-2 border-gray-500 rounded-md px-4 py-2">
+                  <p className="font-bold text-md"> {project.title}</p>
+                  <div className="flex flex-col space-y-3">
+                    <button className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100">
                       Code
                     </button>
-                    <button className="bg-slate-800 border-2 border-gray-500 rounded-md px-4 py-2">
+                    <button className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100">
                       Visit
                     </button>
                   </div>
