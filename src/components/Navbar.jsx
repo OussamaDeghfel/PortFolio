@@ -28,6 +28,23 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  
+    const handleEmailClick = (e) => {
+      e.preventDefault()
+      window.location.href = 'mailto:oussama.deghfel@gmail.com?subject=Inquiry from Your Portfolio Website&body=Hello Oussama,%0D%0A%0D%0AMy name is [Your Name], and I came across your portfolio website. I am reaching out regarding [specific purpose, e.g., a frontend development opportunity, a potential collaboration, or to ask for advice].%0D%0A%0D%0AI would love to discuss [briefly describe what you want to discuss or need assistance with].%0D%0A%0D%0ALooking forward to connecting with you!%0D%0A%0D%0AThank you,%0D%0A[Your Name]%0D%0A[Your Contact Information]';
+    }
+ 
+
+  const DownloadPDF = () => {
+    const pdfUrl = "Sample.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "OUSSAMADEGHFEL.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
   return (
     <>
       <div
@@ -139,14 +156,17 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full font-bold text-gray-300"
               href="/"
+              onClick={handleEmailClick}
             >
-              Email <HiOutlineMail size={30} />
+              Email
+              <HiOutlineMail size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-[#565f69]">
             <a
               className="flex justify-between items-center w-full font-bold text-gray-300"
-              href="./assets/DOCV.pdf"
+              href="/"
+              onClick={DownloadPDF}
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
