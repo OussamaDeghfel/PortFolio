@@ -64,6 +64,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="hover:text-blue-400 hover:font-bold">
+            <Link to="experience" smooth={true} duration={500}>
+              Experience
+            </Link>
+          </li>
+          <li className="hover:text-blue-400 hover:font-bold">
             <Link to="skills" smooth={true} duration={500}>
               Skills
             </Link>
