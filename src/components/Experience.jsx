@@ -1,6 +1,11 @@
-import React from "react";
+// import { motion, useScroll } from "framer-motion"
+import React, { useState } from "react";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 const Experience = () => {
+  // const { scrollXProgress } = useScroll();
+  const [activeExperienceShow, setActiveExperienceShow] = useState(0);
+
   const ExperienceData = [
     {
       id: 1,
@@ -45,34 +50,66 @@ const Experience = () => {
       name="experience"
       className="w-full h-screen bg-[#0a192f] text-gray-300"
     >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
+      <div className="max-w-[1000px] mx-auto p-2 space-y-8 flex flex-col justify-center items-start w-full h-fit ">
+        <div className="w-fit h-fit">
           <div className="pb-8">
-            <p className="text-4xl font-bold inline border-b-4 border-blue-400">
+            <p className="text-4xl font-bold inline border-b-4 pb-2 border-blue-400">
               Experience
             </p>
           </div>
           <div></div>
         </div>
 
-        <div className="max-w-[1000px] grid grid-cols-1 w-full gap-8">
-          {ExperienceData.map((experience) => (
-            <div
-              key={experience.id}
-              className="grid grid-cols-1 space-y-4 border-2 border-slate-500 hover:shadow-white hover:text-white hover:border-cyan-50 duration-300 hover:bg-slate-800 p-8 rounded-md shadow-md"
-            >
-              <div className="flex flex-col">
-                <h1 className="text-4xl font-bold">{experience.title}</h1>
-                <h1 className="text-2xl italic font-medium text-gray-400">
-                  {experience.company}
-                </h1>
-                <span className="italic text-gray-400">
-                  {experience.period}
-                </span>
-              </div>
-              <p>{experience.description}</p>
+        <div className="flex space-x-7 w-fit justify-start items-center m-auto">
+          {/* {ExperienceData[activeExperienceShow].map((experience) => ( */}
+          <div
+            key={ExperienceData[activeExperienceShow].id}
+            className="grid grid-cols-1 space-y-4 w-full border-2 border-slate-500 hover:shadow-white hover:text-white hover:border-cyan-50 duration-300 hover:bg-slate-800 p-8 rounded-md shadow-md"
+          >
+            <div className="flex flex-col">
+              <h1 className="text-4xl font-bold text-cyan-300">
+                {ExperienceData[activeExperienceShow].title}
+              </h1>
+              <h1 className="text-2xl italic font-medium text-gray-400">
+                {ExperienceData[activeExperienceShow].company}
+              </h1>
+              <span className="italic text-gray-400">
+                {ExperienceData[activeExperienceShow].period}
+              </span>
             </div>
-          ))}
+            <p>{ExperienceData[activeExperienceShow].description}</p>
+          </div>
+          {/* ))} */}
+
+          <div className="space-y-8 w-fit h-fit">
+            <FaAngleUp
+              size={30}
+              onClick={() => {
+                if (activeExperienceShow >= 1) {
+                  setActiveExperienceShow(activeExperienceShow - 1);
+                }
+              }}
+              className={
+                activeExperienceShow >= 1
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }
+            />
+
+            <FaAngleDown
+              size={30}
+              onClick={() => {
+                if (activeExperienceShow < ExperienceData.length - 1) {
+                  setActiveExperienceShow(activeExperienceShow + 1);
+                }
+              }}
+              className={
+                activeExperienceShow < ExperienceData.length - 1
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }
+            />
+          </div>
         </div>
       </div>
     </div>
