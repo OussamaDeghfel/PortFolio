@@ -19,28 +19,28 @@ const MyProjects = () => {
       title: "Find Job",
       image: JobFinder,
       codeURL: "",
-      siteURL: "",
+      siteURL: "https://job-finder-steel.vercel.app/",
     },
     {
       id: 3,
-      title: "Food Restaurant",
+      title: "Food Restaurant Delivery",
       image: FooDy,
       codeURL: "",
-      siteURL: "",
+      siteURL: "https://food-deliver-seven.vercel.app/",
     },
     {
       id: 4,
       title: "Tracking IP Address ",
       image: IPAddressTracker,
       codeURL: "",
-      siteURL: "",
+      siteURL: "https://ip-address-tracker-two-ochre.vercel.app/",
     },
     {
       id: 5,
       title: "Site For MovieWatch",
       image: MovieSite,
       codeURL: "",
-      siteURL: "",
+      siteURL: "https://movie-site-omega.vercel.app/",
     },
     {
       id: 6,
@@ -151,14 +151,24 @@ const MyProjects = () => {
                   />
                 </div>
                 <div className="flex justify-between items-center p-4">
-                  <p className="font-bold text-md"> {project.title}</p>
-                  <div className="flex flex-col space-y-3">
-                    <button className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100">
-                    <a href={project.codeURL} target="_blank" rel="noopener noreferrer" >Code</a>
-                    </button>
-                    <button className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100">
-                      <a href={project.siteURL} target="_blank" rel="noopener noreferrer" >Visit</a>
-                    </button>
+                  <p className="font-bold text-md w-[80vh]"> {project.title}</p>
+                  <div className="flex flex-col space-y-3 w-full">
+                    <a
+                      href={project.codeURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100 text-center"
+                    >
+                      Code
+                    </a>
+                    <a
+                      href={project.siteURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100 text-center"
+                    >
+                      View Site
+                    </a>
                   </div>
                 </div>
               </div>
