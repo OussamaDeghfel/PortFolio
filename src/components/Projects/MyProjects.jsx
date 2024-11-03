@@ -1,85 +1,83 @@
-// import { useMemo, useState } from "react";
-// import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
 import ComingSoon from "../../assets/projects/ComingSoon.jpg";
 import MovieSite from "../../assets/projects/MovieSite.jpg";
 import JobFinder from "../../assets/projects/JobFinder.jpg";
 import FooDy from "../../assets/projects/FooDy.png";
 import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
+import EcomQuickBuy from "../../assets/projects/EcomQuickBuy.jpg";
 
 const MyProjects = () => {
-
-const projects = [
+  const projects = [
     {
       id: 1,
-      title: "Site For MovieWatch",
-      image: MovieSite,
+      title: "QuickBuy - Ecommerce ShoppingStore",
+      image: EcomQuickBuy,
       codeURL: "",
-      siteURL:""
+      siteURL: "https://quickbuy-ecommerce-website.vercel.app/",
     },
     {
       id: 2,
       title: "Find Job",
       image: JobFinder,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 3,
       title: "Food Restaurant",
       image: FooDy,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 4,
       title: "Tracking IP Address ",
       image: IPAddressTracker,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 5,
-      title: "ComingSoon",
-      image: ComingSoon,
+      title: "Site For MovieWatch",
+      image: MovieSite,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 6,
       title: "ComingSoon",
       image: ComingSoon,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 7,
       title: "ComingSoon",
       image: ComingSoon,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 8,
       title: "ComingSoon",
       image: ComingSoon,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
     {
       id: 9,
       title: "ComingSoon",
       image: ComingSoon,
       codeURL: "",
-      siteURL:""
+      siteURL: "",
     },
   ];
 
   return (
     <div
       name="projects"
-      className="flex pt-10 justify-around bg-[#0a192f] text-white items-center w-full h-full pb-40"
+      className="flex pt-10 justify-center bg-[#0a192f] text-white items-center w-full h-full pb-40"
     >
-      <div className="w-[980px] ">
+      <div>
         <h1 className="text-4xl font-bold inline border-b-4 border-blue-300">
           Projects
         </h1>
@@ -138,10 +136,13 @@ const projects = [
         </div> */}
 
         {/* ITEMS PROJECTS SHOW  */}
-        <div className="w-full h-full flex justify-between items-center">
-          <div className="grid grid-cols-3 gap-8 justify-center items-center">
+        <div className="w-full h-full flex justify-between items-center ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
             {projects.map((project) => (
-                <div className="h-80 w-[50vh] border border-slate-600 rounded-md shadow-sm shadow-blue-300" key={project.id}>
+              <div
+                className="h-80 w-[50vh] border border-slate-600 rounded-md shadow-sm shadow-blue-300"
+                key={project.id}
+              >
                 <div className="flex">
                   <img
                     src={project.image}
@@ -153,16 +154,15 @@ const projects = [
                   <p className="font-bold text-md"> {project.title}</p>
                   <div className="flex flex-col space-y-3">
                     <button className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100">
-                      Code
+                    <a href={project.codeURL} target="_blank" rel="noopener noreferrer" >Code</a>
                     </button>
                     <button className="opacity-65 hover:border-white duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-white hover:opacity-100">
-                      Visit
+                      <a href={project.siteURL} target="_blank" rel="noopener noreferrer" >Visit</a>
                     </button>
                   </div>
                 </div>
               </div>
             ))}
-            
           </div>
         </div>
       </div>
