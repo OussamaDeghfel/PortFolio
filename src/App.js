@@ -7,7 +7,7 @@ import AllSkills from "./components/Skills/AllSkills";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col justify-between items-center bg-[#0a192f]">
       <Navbar />
       <Home />
       <About />
