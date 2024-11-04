@@ -5,8 +5,13 @@ import FooDy from "../../assets/projects/FooDy.png";
 import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
 import EcomQuickBuy from "../../assets/projects/EcomQuickBuy.jpg";
 import LandingPage from "../../assets/projects/landingPage.jpg";
+import { useState } from "react";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 const MyProjects = () => {
+
+  const [activeProjectShow, setActiveProjectShow] = useState(0);
+
   const projects = [
     {
       id: 1,
@@ -63,22 +68,15 @@ const MyProjects = () => {
       image: ComingSoon,
       codeURL: "",
       siteURL: "",
-    },
-    {
-      id: 9,
-      title: "ComingSoon",
-      image: ComingSoon,
-      codeURL: "",
-      siteURL: "",
-    },
+    }
   ];
 
   return (
     <div
       name="projects"
-      className="flex pt-10 justify-center bg-[#0a192f] text-white items-center w-full h-full pb-40"
+      className="flex pt-10 justify-center bg-[#0a192f] text-white items-center w-full h-full pb-40  "
     >
-      <div>
+      <div className="max-w-[1000px] w-full px-10">
         <h1 className="text-4xl font-bold inline border-b-4 border-blue-300">
           Projects
         </h1>
@@ -87,58 +85,88 @@ const MyProjects = () => {
         </p>
 
         {/* SLIDE PROJECTS SHOW  */}
-        {/* <div className="w-full h-full flex p-8 px-20 justify-between items-center">
-          {disabledButton ? (
-            <BiArrowFromRight
-              size={40}
-              onClick={() => setCounter(counter - 1)}
-              className="cursor-pointer hover:rounded-full hover:border-2 hover:border-white duration-50 hover:shadow-sm hover:shadow-blue-300"
-            />
-          ) : (
-            <BiArrowFromRight
-              size={40}
-              color="gray"
-              className="cursor-not-allowed hover:rounded-full hover:border-2 hover:border-gray-400 duration-50 hover:shadow-sm hover:shadow-blue-300"
-            />
-          )}
+        <div className="flex space-x-7 w-fit justify-start items-center m-auto">
 
-          <div className="flex flex-col justify-center items-center">
-            <div className="h-96 w-[70vh] border border-slate-600 rounded-md shadow-md shadow-blue-300">
-              <div className="flex">
-                <img
-                  src={projectShow}
-                  alt="comming soon project"
-                  className="rounded-md h-64 w-full"
-                />
-              </div>
-              <div className="flex justify-between items-center p-4">
-                <p> Project title</p>
-                <div className="flex flex-col space-y-2">
-                  <button className="bg-slate-800 border-2 border-white rounded-md px-4 py-2">
-                    Visit
-                  </button>
-                  <button className="bg-slate-800 border-2 border-white rounded-md px-4 py-2">
-                    Code
-                  </button>
+        <div className=" w-1 h-56 bg-gray-500 rounded-full">
+          <span className={`w-2 h-2 flex bg-cyan-300 rounded-full -translate-x-0.5 duration-300 
+            ${activeProjectShow === 0 && "translate-y-1"} 
+            ${activeProjectShow === 1 && "translate-y-8"} 
+            ${activeProjectShow === 2 && "translate-y-16"}
+            ${activeProjectShow === 3 && "translate-y-24"}
+            ${activeProjectShow === 4 && "translate-y-32"}
+            ${activeProjectShow === 5 && "translate-y-40"}
+            ${activeProjectShow === 6 && "translate-y-48"}
+            ${activeProjectShow === 7 && "translate-y-52"}`} />
+        </div>
+        
+          <div
+                className="w-fit h-fit mt-12 border border-slate-600 rounded-md shadow-sm shadow-blue-300"
+                key={projects[activeProjectShow].id}
+              >
+                <div className="flex">
+                  <img
+                    src={projects[activeProjectShow].image}
+                    alt="comming soon project"
+                    className="rounded-t-md h-80 w-full"
+                  />
+                </div>
+                <div className="flex justify-between items-center p-4">
+                  <p className="font-bold text-2xl text-cyan-300 w-[80vh]"> {projects[activeProjectShow].title}</p>
+                  <div className="flex flex-col space-y-3 w-1/2">
+                    <a
+                      href={projects[activeProjectShow].codeURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-65 hover:border-cyan-300 duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-cyan-300 hover:opacity-100 text-center"
+                    >
+                      Code
+                    </a>
+                    <a
+                      href={projects[activeProjectShow].siteURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-65 hover:border-cyan-300  duration-500 bg-slate-800 border-2 border-gray-500 rounded-md px-5 py-1 hover:text-cyan-300 hover:opacity-100 text-center"
+                    >
+                      View Site
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+
+          <div className="space-y-8 w-fit h-fit">
+            <FaAngleUp
+              size={30}
+              onClick={() => {
+                if (activeProjectShow >= 1) {
+                  setActiveProjectShow(activeProjectShow - 1);
+                }
+              }}
+              className={
+                activeProjectShow >= 1
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }
+            />
+
+            <FaAngleDown
+              size={30}
+              onClick={() => {
+                if (activeProjectShow < projects.length - 1) {
+                  setActiveProjectShow(activeProjectShow + 1);
+                }
+              }}
+              className={
+                activeProjectShow < projects.length - 1
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }
+            />
           </div>
-          {disabledButton ? <BiArrowFromLeft
-            size={40}
-            color="gray"
-            className="cursor-not-allowed hover:rounded-full hover:border-2 hover:border-gray-400 duration-50 hover:shadow-sm hover:shadow-blue-300"
-          /> : (<BiArrowFromLeft
-            size={40}
-            onClick={() => setCounter(counter + 1)}
-            className="cursor-pointer hover:rounded-full hover:border-2 hover:border-white duration-50 hover:shadow-sm hover:shadow-blue-300"
-          />)}
-          
-        </div> */}
+        </div>
 
         {/* ITEMS PROJECTS SHOW  */}
-        <div className="w-full h-full flex justify-between items-center ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+        {/* <div className="w-full h-full flex justify-between items-center ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
             {projects.map((project) => (
               <div
                 className="h-80 w-[50vh] border border-slate-600 rounded-md shadow-sm shadow-blue-300"
@@ -175,8 +203,11 @@ const MyProjects = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
+
+
+            
     </div>
   );
 };
