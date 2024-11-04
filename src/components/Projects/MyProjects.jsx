@@ -4,6 +4,7 @@ import JobFinder from "../../assets/projects/JobFinder.jpg";
 import FooDy from "../../assets/projects/FooDy.png";
 import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
 import EcomQuickBuy from "../../assets/projects/EcomQuickBuy.jpg";
+import LandingPage from "../../assets/projects/landingPage.jpg";
 
 const MyProjects = () => {
   const projects = [
@@ -44,10 +45,10 @@ const MyProjects = () => {
     },
     {
       id: 6,
-      title: "ComingSoon",
-      image: ComingSoon,
-      codeURL: "",
-      siteURL: "",
+      title: "Landing Page",
+      image: LandingPage,
+      codeURL: "https://github.com/OussamaDeghfel/React-LandingPage.git",
+      siteURL: "https://react-landing-page-lime-delta.vercel.app/",
     },
     {
       id: 7,

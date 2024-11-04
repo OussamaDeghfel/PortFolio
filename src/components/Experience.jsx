@@ -61,6 +61,11 @@ const Experience = () => {
         </div>
 
         <div className="flex space-x-7 w-fit justify-start items-center m-auto">
+
+        <div className=" w-1 h-32 bg-gray-500 rounded-full">
+          <span className={`w-2 h-2 flex bg-cyan-300 rounded-full -translate-x-0.5 duration-300 ${activeExperienceShow === 0 && "translate-y-1"} ${activeExperienceShow === 1 && "translate-y-14"} ${activeExperienceShow === 2 && "translate-y-28"}`} />
+        </div>
+        
           {/* {ExperienceData[activeExperienceShow].map((experience) => ( */}
           <div
             key={ExperienceData[activeExperienceShow].id}
