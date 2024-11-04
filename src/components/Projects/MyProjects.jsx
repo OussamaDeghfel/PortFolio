@@ -59,22 +59,22 @@ const MyProjects = () => {
       id: 7,
       title: "ComingSoon",
       image: ComingSoon,
-      codeURL: "",
-      siteURL: "",
+      codeURL: "/",
+      siteURL: "/",
     },
     {
       id: 8,
       title: "ComingSoon",
       image: ComingSoon,
-      codeURL: "",
-      siteURL: "",
+      codeURL: "/",
+      siteURL: "/",
     }
   ];
 
   return (
     <div
       name="projects"
-      className="flex pt-10 justify-center bg-[#0a192f] text-white items-center w-full h-full pb-40  "
+      className="flex pt-10 justify-center bg-[#0a192f] text-white items-center w-full h-full pb-20  "
     >
       <div className="max-w-[1000px] w-full px-10">
         <h1 className="text-4xl font-bold inline border-b-4 border-blue-300">
