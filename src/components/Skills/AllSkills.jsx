@@ -16,13 +16,13 @@ import Skill from "./skill";
 const AllSkills = () => {
   return (
     <div name="skills" className="w-full h-full bg-[#0a192f] text-gray-300 py-8">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center items-center w-full h-full">
+        <div className="flex flex-col justify-center items-center">
           <p className="text-4xl w-24 font-bold border-b-4 border-blue-300">Skills</p>
           <p className="py-4">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-5 gap-5 text-center py-8">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-5 gap-5 text-center place-items-center py-8">
           <Skill icon={HTML} name="HTML" />
           <Skill icon={CSS} name="CSS" />
           <Skill icon={Javascript} name="JAVASCRIPT" />

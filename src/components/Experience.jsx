@@ -1,6 +1,6 @@
 // import { motion, useScroll } from "framer-motion"
 import React, { useState } from "react";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import { FaAngleDown, FaAngleLeft, FaAngleRight, FaAngleUp } from "react-icons/fa6";
 
 const Experience = () => {
   // const { scrollXProgress } = useScroll();
@@ -50,7 +50,7 @@ const Experience = () => {
       name="experience"
       className="w-full h-screen bg-[#0a192f] text-gray-300"
     >
-      <div className="max-w-[1000px] mx-auto p-2 space-y-8 flex flex-col justify-center items-start w-full h-fit ">
+      <div className="max-w-[1000px] mx-auto p-2 space-y-8 flex flex-col justify-center items-center md:items-start w-full h-fit ">
         <div className="w-fit h-fit">
           <div className="pb-8">
             <p className="text-4xl font-bold inline border-b-4 pb-2 border-blue-400">
@@ -60,10 +60,13 @@ const Experience = () => {
           <div></div>
         </div>
 
-        <div className="flex space-x-7 w-fit justify-start items-center m-auto">
+        <div className="flex flex-col md:flex-row space-y-5 md:space-x-7 w-fit justify-start items-center m-auto">
 
-        <div className=" w-1 h-32 bg-gray-500 rounded-full">
-          <span className={`w-2 h-2 flex bg-cyan-300 rounded-full -translate-x-0.5 duration-300 ${activeExperienceShow === 0 && "translate-y-1"} ${activeExperienceShow === 1 && "translate-y-14"} ${activeExperienceShow === 2 && "translate-y-28"}`} />
+        <div className=" w-32 h-1 md:w-1 md:h-32 bg-gray-500 rounded-full">
+          <span className={`w-2 h-2 flex bg-cyan-300 rounded-full -translate-y-0.5 md:-translate-x-0.5 duration-300 
+            ${activeExperienceShow === 0 && "translate-x-1 md:translate-y-1"} 
+            ${activeExperienceShow === 1 && "translate-x-14 md:translate-y-14"} 
+            ${activeExperienceShow === 2 && "translate-x-28 md:translate-y-28"}`} />
         </div>
         
           {/* {ExperienceData[activeExperienceShow].map((experience) => ( */}
@@ -86,7 +89,8 @@ const Experience = () => {
           </div>
           {/* ))} */}
 
-          <div className="space-y-8 w-fit h-fit">
+          {/* ARROWS PROJECTS SHOW in medium & Large size */}
+          <div className="hidden md:flex md:flex-col space-y-8 w-fit h-fit">
             <FaAngleUp
               size={30}
               onClick={() => {
@@ -102,6 +106,41 @@ const Experience = () => {
             />
 
             <FaAngleDown
+              size={30}
+              onClick={() => {
+                if (activeExperienceShow < ExperienceData.length - 1) {
+                  setActiveExperienceShow(activeExperienceShow + 1);
+                }
+              }}
+              className={
+                activeExperienceShow < ExperienceData.length - 1
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }
+            />
+          </div>
+
+
+              {/* ARROWS PROJECTS SHOW in small size */}
+          <div className="flex md:hidden space-x-7 w-fit h-fit">
+           
+
+            <FaAngleLeft
+              size={30}
+              
+
+              onClick={() => {
+                if (activeExperienceShow >= 1) {
+                  setActiveExperienceShow(activeExperienceShow - 1);
+                }
+              }}
+              className={
+                activeExperienceShow >= 1
+                  ? "cursor-pointer"
+                  : "cursor-not-allowed opacity-50"
+              }
+            />
+             <FaAngleRight
               size={30}
               onClick={() => {
                 if (activeExperienceShow < ExperienceData.length - 1) {
