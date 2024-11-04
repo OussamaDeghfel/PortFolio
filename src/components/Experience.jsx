@@ -50,7 +50,7 @@ const Experience = () => {
       name="experience"
       className="w-full h-screen bg-[#0a192f] text-gray-300"
     >
-      <div className="max-w-[1000px] mx-auto p-2 space-y-8 flex flex-col justify-center items-center md:items-start w-full h-fit ">
+      <div className="max-w-[1000px] mx-auto p-2 md:px-4 space-y-8 flex flex-col justify-center items-center md:items-start w-full h-fit ">
         <div className="w-fit h-fit">
           <div className="pb-8">
             <p className="text-4xl font-bold inline border-b-4 pb-2 border-blue-400">

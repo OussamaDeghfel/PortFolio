@@ -75,8 +75,8 @@ const MyProjects = () => {
       name="projects"
       className="flex pt-10 justify-center bg-[#0a192f] text-white items-center w-full h-full pb-20  "
     >
-      <div className="max-w-[1000px] w-full px-10">
-        <div className="flex flex-col justify-center items-center">
+      <div className="max-w-[1000px] w-full px-10 md:px-4">
+        <div className="flex flex-col justify-center items-center md:items-start">
         <h1 className="text-4xl font-bold inline border-b-4 border-blue-300">
           Projects
         </h1>
@@ -85,9 +85,9 @@ const MyProjects = () => {
         </p>
         </div>
 
-<div>
+        <div>
         {/* SLIDE PROJECTS SHOW  */}
-        <div className="flex flex-col md:flex-row space-y-4 md:space-x-7 md:translate-x-0 justify-start items-center m-auto mt-10">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-x-7 md:translate-x-0 justify-start md:justify-center items-center m-auto mt-10">
           <div className=" w-56 h-1 md:w-1 md:h-56 bg-gray-500 rounded-full">
             <span
               className={`w-2 h-2 flex bg-cyan-300 rounded-full -translate-y-0.5 md:-translate-x-0.5 duration-300 
