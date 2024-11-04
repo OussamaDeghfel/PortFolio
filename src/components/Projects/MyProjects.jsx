@@ -38,7 +38,7 @@ const MyProjects = () => {
       title: "Tracking IP Address ",
       image: IPAddressTracker,
       codeURL: "https://github.com/OussamaDeghfel/IP-Address-Tracker.git",
-      siteURL: "https://ip-address-tracker-two-ochre.vercel.app/",
+      siteURL: "https://ip-address-tracker-kappa-five.vercel.app/",
     },
     {
       id: 5,
