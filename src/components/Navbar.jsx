@@ -37,21 +37,23 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ${
+        className={`fixed w-screen h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ${
           visible ? "visible" : "invisible"
         }`}
         // className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300"
       >
         {" "}
-        <div>
+        <div className="flex">
           <img
             // className="hover:translate-x-3 duration-500 "
             src={PortfolioLogo}
             alt="Portfolio OussamaLogo"
-            style={{ width: "200px" }}
+            style={{ width: "150px" }}
           />
         </div>
-        {/* navbar menu */}
+
+        
+        {/* Large&Medium Sizes NavBar Menu */}
         <ul className="hidden md:flex">
           <li className="hover:text-blue-400 hover:font-bold">
             <Link to="home" smooth={true} duration={500}>
@@ -79,10 +81,14 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+
+
         {/* Web Bar */}
-        <div onClick={handleClick} className="md:hidden z-10">
-          {!nav ? <FaBars /> : <FaTimes />}
+        <div onClick={handleClick} className="md:hidden z-10 flex">
+          {!nav ? <FaBars size={30} /> : <FaTimes size={30} />}
         </div>
+
+
         {/* Mobile Menu*/}
         <ul
           className={
@@ -133,6 +139,8 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
+
       {/* Social Icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
