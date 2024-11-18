@@ -1,5 +1,4 @@
 import ComingSoon from "../../assets/projects/ComingSoon.jpg";
-import MovieSite from "../../assets/projects/MovieSite.jpg";
 import JobFinder from "../../assets/projects/JobFinder.jpg";
 import FooDy from "../../assets/projects/FooDy.png";
 import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
@@ -42,32 +41,18 @@ const MyProjects = () => {
     },
     {
       id: 5,
-      title: "Site For MovieWatch",
-      image: MovieSite,
-      codeURL: "https://github.com/OussamaDeghfel/Movie_Site.git",
-      siteURL: "https://movie-site-omega.vercel.app/",
-    },
-    {
-      id: 6,
       title: "Landing Page",
       image: LandingPage,
       codeURL: "https://github.com/OussamaDeghfel/React-LandingPage.git",
       siteURL: "https://react-landing-page-lime-delta.vercel.app/",
     },
     {
-      id: 7,
+      id: 6,
       title: "ComingSoon",
       image: ComingSoon,
       codeURL: "/",
       siteURL: "/",
-    },
-    {
-      id: 8,
-      title: "ComingSoon",
-      image: ComingSoon,
-      codeURL: "/",
-      siteURL: "/",
-    },
+    }
   ];
 
   return (
