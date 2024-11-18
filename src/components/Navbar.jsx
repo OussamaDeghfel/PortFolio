@@ -9,7 +9,6 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
-
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
 
@@ -51,8 +50,6 @@ const Navbar = () => {
             style={{ width: "150px" }}
           />
         </div>
-
-        
         {/* Large&Medium Sizes NavBar Menu */}
         <ul className="hidden md:flex">
           <li className="hover:text-blue-400 hover:font-bold">
@@ -81,14 +78,10 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-
-
         {/* Web Bar */}
         <div onClick={handleClick} className="md:hidden z-10 flex">
           {!nav ? <FaBars size={30} /> : <FaTimes size={30} />}
         </div>
-
-
         {/* Mobile Menu*/}
         <ul
           className={
@@ -140,7 +133,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-
       {/* Social Icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
@@ -171,6 +163,40 @@ const Navbar = () => {
               onClick={handleEmailClick}
             >
               Email
+              <HiOutlineMail size={30} />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="w-fit h-fit flex translate-y-20 md:hidden ">
+        <ul className="flex space-x-10">
+          <li className="bg-blue-600 py-2">
+            <a
+              className="flex justify-between items-center w-full font-bold text-gray-300"
+              href="https://www.linkedin.com/in/oussama-deghfel/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={30} />
+            </a>
+          </li>
+          <li className="bg-[#333333] py-2">
+            <a
+              className="flex justify-between items-center w-full font-bold text-gray-300"
+              href="https://github.com/OussamaDeghfel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={30} />
+            </a>
+          </li>
+          <li className="bg-[#85b4ab] py-2">
+            <a
+              className="flex justify-between items-center w-full font-bold text-gray-300"
+              href="/"
+              onClick={handleEmailClick}
+            >
               <HiOutlineMail size={30} />
             </a>
           </li>
