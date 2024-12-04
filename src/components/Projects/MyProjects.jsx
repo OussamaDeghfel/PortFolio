@@ -1,5 +1,5 @@
 import ComingSoon from "../../assets/projects/ComingSoon.jpg";
-import JobFinder from "../../assets/projects/JobFinder.jpg";
+import JobFinder from "../../assets/projects/jobFinder.jpg";
 import FooDy from "../../assets/projects/FooDy.png";
 import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
 import EcomQuickBuy from "../../assets/projects/EcomQuickBuy.jpg";
@@ -28,7 +28,7 @@ const MyProjects = () => {
       title: "Find Job",
       image: JobFinder,
       codeURL: "https://github.com/OussamaDeghfel/JobFinder.git",
-      siteURL: "https://job-finder-steel.vercel.app/",
+      siteURL: "https://job-finder-teal-rho.vercel.app/",
     },
     {
       id: 3,
