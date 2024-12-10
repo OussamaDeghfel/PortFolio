@@ -1,8 +1,8 @@
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Home from "./components/Home";
+import MyProjects from "./components/MyProjects";
 import Navbar from "./components/Navbar";
-import MyProjects from "./components/Projects/MyProjects";
 import AllSkills from "./components/Skills/AllSkills";
 
 function App() {

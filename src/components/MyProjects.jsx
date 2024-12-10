@@ -1,9 +1,9 @@
-import ComingSoon from "../../assets/projects/ComingSoon.jpg";
-import jobFinder from "../../assets/projects/jobFinder.jpg";
-import FooDy from "../../assets/projects/FooDy.png";
-import IPAddressTracker from "../../assets/projects/IPAddressTracker.jpg";
-import EcomQuickBuy from "../../assets/projects/EcomQuickBuy.jpg";
-import LandingPage from "../../assets/projects/landingPage.jpg";
+import ComingSoon from "../assets/projectsImg/ComingSoon.jpg";
+import jobFinder from "../assets/projectsImg/jobFinder.jpg";
+import FooDy from "../assets/projectsImg/FooDy.png";
+import IPAddressTracker from "../assets/projectsImg/IPAddressTracker.jpg";
+import EcomQuickBuy from "../assets/projectsImg/EcomQuickBuy.jpg";
+import LandingPage from "../assets/projectsImg/landingPage.jpg";
 import { useState } from "react";
 import {
   FaAngleDown,
